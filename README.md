@@ -4,6 +4,7 @@ PHP Tool to easily get server information
 Server-Stas is a group of premade easy to use functions that can return various types of information about your server.
 
 Server-Stats.php - Just function no comments
+
 Server-Stats-Dev.php - Functions with examples and comments
 
 ## What information can i get with Server-Stats
