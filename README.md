@@ -61,6 +61,21 @@ or
 ###Useing Each Function
 To use the function just call then whereever you need them, if you wanna echo the number out make sure you use ```php echo ``` before the function call. An example of useing one of the function and adding some text with it would be  ```php echo get_usedram(gb) . ' ' . 'Ram Being Used'; ``` This would show '[yourram] GB Ram Being Used'
 
+####get_uptime($arg)
+This function will return the uptime of the server (Please bare in mind the time is relative to eachother)
+get_uptime($arg) can be used as follows, days will return the ammount of days the server has been up, hours will return the ammount of hours the server has been up relative to days, mins will return the ammount of mins the server has been up relative to hours and secs will return the ammount of secs the server has been up relavent to mins.
+```php
+get_uptime(days)
+get_uptime(hours)
+get_uptime(mins)
+get_uptime(secs)
+```
+Example: Uptime: 1 Day 3 Hours 10 Mins 57.78 Secs
+To get this you would use this:
+```php
+echo 'Uptime:' . ' ' . get_uptime(days) . ' ' . 'Day' . ' ' . get_uptime(hours) . ' ' . 'Hours' . ' ' . get_uptime(mins) . ' ' . 'Mins' . ' ' . round_up(get_uptime(secs), 2) . ' ' . 'Secs';
+```
+
 ####get_totalram($arg)
 This function will return the tatal ammount of RAm installed on the server.
 get_totalram($arg) can be used as follows, kb will return the value in kilobytes, mb will return the value in megabytes and gb will return the value in gigabytes.
@@ -154,5 +169,9 @@ get_diskusedspace2() can be used as follows and will return the used disk space 
 ```php
 get_diskusedspace2() 
 ```
-
-
+####round_up($value, $precision)
+This function will round a numer up to however many decibels you choose all function already have this in them and return the value to 2 decibels points however if you want to round the uptime this will be needed.
+EXAMPLE rounding up secs on uptime: 
+```php
+round_up(get_uptime(secs), 2) 
+```
