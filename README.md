@@ -7,6 +7,8 @@ Server-Stats.php - Just function no comments
 
 Server-Stats-Dev.php - Functions with examples and comments
 
+Coming soon - You will be able to refresh the data without refreshing the page
+
 ## What information can i get with Server-Stats
 With Server-stats you can get the folling information:
 
