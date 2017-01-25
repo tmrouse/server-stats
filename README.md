@@ -45,3 +45,10 @@ get_diskfreespace($arg)
 get_diskusedspace($arg)
 get_diskusedspace2()
 ```
+
+##How To Use
+To use Server-Stas just use it as a php include on your project
+
+```php
+<?php include_once 'inc/serverstats.php' ?>
+```
