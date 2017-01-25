@@ -16,3 +16,32 @@ With Server-stats you can get the folling information:
 - Total Disk - Space (Ammount in Kilobytes, MegaBytes, Gigabytes)                           
 - Total Free Disk Space - (Ammount Kilobytes, MegaBytes, Gigabytes)                      
 - Disk Space Used - (Ammount Kilobytes, MegaBytes, Gigabytes or %)
+
+##Function Names
+
+Uptime:
+```php
+get_uptime($arg)
+```
+Ram:
+```php
+get_totalram($arg)
+get_availableram($arg)
+get_freeram($arg)
+get_usedram($arg)
+get_usedram2()
+```
+
+CPU:
+```php
+get_cpu_usage()
+get_cpuinfo($arg)
+```
+
+HHD/SSD
+```php
+get_disktotalspace($arg)
+get_diskfreespace($arg)
+get_diskusedspace($arg)
+get_diskusedspace2()
+```
