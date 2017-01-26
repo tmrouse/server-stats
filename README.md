@@ -1,7 +1,7 @@
 # Server-Stats
 PHP Tool to easily get server information
 
-Server Stas is a group of premade easy to use custom functions that can return various types of information about your server. It can be used as static information or can be set up to auto refresh data whatever is needed for your project.
+Server Stats is a group of premade easy to use custom functions that can return various types of information about your server. It can be used as static information or can be set up to auto refresh data whatever is needed for your project.
 
 In the "Server Stats" folder you will find the file you need to use server stats without live refreshing
 
