@@ -3,13 +3,13 @@ PHP Tool to easily get server information
 
 Server Stas is a group of premade easy to use custom functions that can return various types of information about your server. It can be used as static information or can be set up to auto refresh data whatever is needed for your project.
 
-Server stats can also be used remotley useing auto refresh.
-
 In the "Server Stats" folder you will find the file you need to use server stats without live refreshing
 
 In the "Server Stats (With live refreshing)" folder you will find the files you need to use server stats with live refreshing (3 in total)
 
 Both are very easy to use, server stats requres no setup at all apart from including the file. Server stats with refreshing requires a little setup but is very simple and explaied below.
+
+Server stats can also be used remotley useing auto refresh. But please note only functions added to the array in stats_json can be used remotley so if you want to use a function remotley thats not in there it will need to be added but this is very easy to do.
 
 ## What information can i get with Server-Stats
 With Server-stats you can get the folling information:
@@ -57,9 +57,49 @@ $function_array = array('cpuusage' => get_cpu_usage(),
 You can also remove any of the above entreies into the array if you know you whont be useing them and want to make the file smaller. However this is not really nessary.
 
 ####Step 2 Configure the serverstats.js File
-This is the most inporant part first we need to set the location of the stats_json file. (carry on from here)
+This is the most inporant part first we need to set the location of the stats_json file. The example below shows the setup for my server please change this to the relavent link on your own server where the stats_json file is located
 
+```js
+$.get( "https://server.tomrouse.me/inc/stats_json.php", function( data ) {
+```
 
+The next step is 100% optional and should only be done if you really care about useing less banwidth (even know this does not use much anyway) This is removeing the commands from the call to get the information. the example below shows the defualt file you can edit this and remove the var's that you whont be useing.
+
+```js
+  var cpuusage = obj.cpuusage;
+
+  var usedram = obj.usedram;
+  var freeram = obj.freeram;
+  var usedram2 = obj.usedram2;
+
+  var diskfreespace = obj.diskfreespace;
+  var diskusedspace = obj.diskusedspace;
+  var diskusedspace2 = obj.diskusedspace2;
+
+  var uptimedays = obj.uptimedays;
+  var uptimehours = obj.uptimehours;
+  var uptimemins = obj.uptimemins;
+  var uptimesecs = obj.uptimesecs;
+```
+The final step is to set the element that will be used to show the data the example below shows i have set each value to show in a element with the class of 'result0' - 'result10':
+
+```js
+  $(".result1").html(usedram); // For this is will display the used ram value in the html elment with the class result1
+  $(".result2").html(freeram); // For this is will display the free ram value in the html elment with the class result2
+  $(".result3").html(usedram2); // For this is will display the used ram % value in the html elment with the class result3
+
+  $(".result4").html(diskfreespace); // For this is will display the disk free space value in the html elment with the class result4
+  $(".result5").html(diskusedspace); // For this is will display the disk used space value in the html elment with the class result5
+  $(".result6").html(diskusedspace2); // For this is will display the disk used space % value in the html elment with the class result6
+
+  $(".result7").html(uptimedays); // For this is will display the uptime in days value in the html elment with the class result7
+  $(".result8").html(uptimehours); // For this is will display the uptime in hours value in the html elment with the class result8
+  $(".result9").html(uptimemins); // For this is will display the uptime in mins value in the html elment with the class result9
+  $(".result10").html(uptimesecs); // For this is will display the uptime in secs value in the html elment with the class result10
+```
+Its very easy to change the ones i have added or add your own as all the var's are already made you just need to pick where to use them.
+
+If you want more information on how each function works look below!
 
 ##How To Use (Without auto refresh) 
 To use Server Stats just use it as a php include on your project and then you can call in the functions.
