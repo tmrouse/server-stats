@@ -11,6 +11,8 @@ Both are very easy to use, server stats requres no setup at all apart from inclu
 
 Server stats can also be used remotley useing auto refresh. But please note only functions added to the array in stats_json can be used remotley so if you want to use a function remotley thats not in there it will need to be added but this is very easy to do.
 
+(Will be updateing with wiki guides and rewwriting this read me soon)
+
 ## What information can i get with Server-Stats
 With Server-stats you can get the folling information:
 
