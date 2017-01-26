@@ -17,6 +17,12 @@ With Server-stats you can get the folling information:
 - Total Free Disk Space - (Ammount Kilobytes, MegaBytes, Gigabytes)                      
 - Disk Space Used - (Ammount Kilobytes, MegaBytes, Gigabytes or %)
 
+##How To Use
+To use Server Stas (Without auto refresh) just use it as a php include on your project and then you can call in the functions.
+
+```php
+<?php include_once 'directory/from/file/you/want/to/use/it/on/Server-Stats.php' ?>
+```
 ##Function Names
 
 Uptime:
@@ -44,18 +50,6 @@ get_disktotalspace($arg)
 get_diskfreespace($arg)
 get_diskusedspace($arg)
 get_diskusedspace2()
-```
-
-##How To Use
-To use Server-Stas just use it as a php include on your project
-
-```php
-<?php include_once 'directory/from/file/you/want/to/use/it/on/Server-Stats.php' ?>
-```
-or
-
-```php
-<?php include_once 'directory/from/file/you/want/to/use/it/on/Server-Stats-Dev.php' ?>
 ```
 
 ###Useing Each Function
