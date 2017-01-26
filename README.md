@@ -3,6 +3,8 @@ PHP Tool to easily get server information
 
 Server Stas is a group of premade easy to use custom functions that can return various types of information about your server. It can be used as static information or can be set up to auto refresh data whatever is needed for your project.
 
+Server stats can also be used remotley useing auto refresh.
+
 In the "Server Stats" folder you will find the file you need to use server stats without live refreshing
 
 In the "Server Stats (With live refreshing)" folder you will find the files you need to use server stats with live refreshing (3 in total)
@@ -23,8 +25,44 @@ With Server-stats you can get the folling information:
 - Total Free Disk Space - (Ammount Kilobytes, MegaBytes, Gigabytes)                      
 - Disk Space Used - (Ammount Kilobytes, MegaBytes, Gigabytes or %)
 
-##How To Use
-To use Server Stas (Without auto refresh) just use it as a php include on your project and then you can call in the functions.
+##How To Use (with auto refresh)
+To use Server Stats with auto refresh you will need the 3 files provided in the "Server Stats (With auto refresh)" folder. 
+- serverstats.php
+- stats_json.php
+- serverstats.js
+
+####Step 1 Configure the stats_json.php File
+To do this you will need to change the values in the args to what memory size you want to use. By defualt they are all st to MB but can be KB, MB or GB if you want to find out more about this look as the normal setup for Server Stats without auto refresh below. However for the most part this file does not need to be changed inless you want to change the values given out from KB, MB, GB.
+
+Heres an example of all the values being GB: 
+
+```php
+$function_array = array('cpuusage' => get_cpu_usage(),
+
+                        'usedram' => get_usedram(gb), //This value has been changed from mb to gb
+                        'freeram' => get_freeram(gb), //This value has been changed from mb to gb
+                        'usedram2' => get_usedram2(), //This function does not use any args
+
+                        'diskfreespace' => get_diskfreespace(gb), //This value has been changed from mb to gb
+                        'diskusedspace' => get_diskusedspace(gb), //This value has been changed from mb to gb
+                        'diskusedspace2' => get_diskusedspace2(), //This function does not use any args
+
+                        'uptimedays' => get_uptime(days), //This value sould not be changed at all
+                        'uptimehours' => get_uptime(hours), //This value sould not be changed at all
+                        'uptimemins' => get_uptime(mins), //This value sould not be changed at all
+                        'uptimesecs' => get_uptime(secs), //This value sould not be changed at all
+                        );
+
+```
+You can also remove any of the above entreies into the array if you know you whont be useing them and want to make the file smaller. However this is not really nessary.
+
+####Step 2 Configure the serverstats.js File
+This is the most inporant part first we need to set the location of the stats_json file. (carry on from here)
+
+
+
+##How To Use (Without auto refresh) 
+To use Server Stats just use it as a php include on your project and then you can call in the functions.
 
 ```php
 <?php include_once 'directory/from/file/you/want/to/use/it/on/Server-Stats.php' ?>
