@@ -48,7 +48,7 @@ function get_uptime($arg) {
   $days  = $num;
 
   if ($arg == 'secs') {
-    return $secs;
+    return round_up($secs, 0);
   }
 
   else if ($arg == 'mins') {
@@ -252,7 +252,7 @@ function get_usedram2() {
 function get_cpu_usage(){
 
     $load = sys_getloadavg();
-    return $load[0];
+    return $load[0] . '%';
 
 }
 
@@ -328,19 +328,19 @@ function get_disktotalspace($arg) {
   if ($arg == 'kb') {
     $kb = round_up($kb, 2);
     $kb_rounded = $kb;
-    return $kb_rounded;
+    return $kb_rounded . ' ' . 'KB';
   }
 
   else if ($arg == 'mb') {
     $mb = round_up($mb, 2);
     $mb_rounded = $mb;
-    return $mb_rounded;
+    return $mb_rounded . ' ' . 'MB';
   }
 
   else if ($arg == 'gb') {
     $gb = round_up($gb, 2);
     $gb_rounded = $gb;
-    return $gb_rounded;
+    return $gb_rounded . ' ' . 'GB';
   }
 
 }
@@ -366,19 +366,19 @@ function get_diskfreespace($arg) {
   if ($arg == 'kb') {
     $kb = round_up($kb, 2);
     $kb_rounded = $kb;
-    return $kb_rounded;
+    return $kb_rounded . ' ' . 'KB';
   }
 
   else if ($arg == 'mb') {
     $mb = round_up($mb, 2);
     $mb_rounded = $mb;
-    return $mb_rounded;
+    return $mb_rounded . ' ' . 'MB';
   }
 
   else if ($arg == 'gb') {
     $gb = round_up($gb, 2);
     $gb_rounded = $gb;
-    return $gb_rounded;
+    return $gb_rounded . ' ' . 'GB';
   }
 
 }
@@ -403,19 +403,19 @@ function get_diskusedspace($arg) {
   if ($arg == 'kb') {
     $kb = round_up($kb, 2);
     $kb_rounded = $kb;
-    return $kb_rounded;
+    return $kb_rounded . ' ' . 'KB';
   }
 
   else if ($arg == 'mb') {
     $mb = round_up($mb, 2);
     $mb_rounded = $mb;
-    return $mb_rounded;
+    return $mb_rounded . ' ' . 'MB';
   }
 
   else if ($arg == 'gb') {
     $gb = round_up($gb, 2);
     $gb_rounded = $gb;
-    return $gb_rounded;
+    return $gb_rounded . ' ' . 'GB';
   }
 
 }
