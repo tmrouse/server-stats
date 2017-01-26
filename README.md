@@ -18,7 +18,7 @@ With Server-stats you can get the folling information:
 
 - Uptime - (Days, Hours, Mins, Secs)                                                             
 - Total RAM - (Ammount in Kilobytes, MegaBytes, Gigabytes)                                  
-- Available - RAM (Ammount in Kilobytes, MegaBytes, Gigabytes)                              
+- Available RAM - (Ammount in Kilobytes, MegaBytes, Gigabytes)                              
 - Free RAM - (Ammount in Kilobytes, MegaBytes, Gigabytes)                                   
 - Used RAM - (Ammount inKilobytes, MegaBytes, Gigabytes or %)                              
 - CPU Useage - (As a %)                                                         
