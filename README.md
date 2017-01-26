@@ -31,6 +31,8 @@ To use Server Stats with auto refresh you will need the 3 files provided in the 
 - stats_json.php
 - serverstats.js
 
+You will also need jqery installed. 
+
 ####Step 1 Configure the stats_json.php File
 To do this you will need to change the values in the args to what memory size you want to use. By defualt they are all st to MB but can be KB, MB or GB if you want to find out more about this look as the normal setup for Server Stats without auto refresh below. However for the most part this file does not need to be changed inless you want to change the values given out from KB, MB, GB.
 
