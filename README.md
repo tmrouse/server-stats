@@ -1,3 +1,6 @@
+## BIG UPDATE
+In the next few days ill be realsing a fully rewritten verstion of sever-stats with tons of new functions that allows you to get way more information from your server. Also the current function are all being re-written o be cleaner.
+
 # Server-Stats
 PHP Tool to easily get server information
 
