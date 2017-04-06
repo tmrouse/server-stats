@@ -30,7 +30,7 @@ Available Stats:
  - Available Mem: get_available_mem($args)
  - Cached Mem: get_cached_mem($args)
  - Swap Mem: get_swap_mem($args)
- - Buffer Mem: get_butffer_mem($agrs)
+ - Buffer Mem: get_buffer_mem($agrs)
  - Shmem: get_shmem_mem($args)
  - SReclaimable: get_sreclaimable_mem($args)
  - SUnreclaim: get_sunreclaim_mem($args)
@@ -217,7 +217,7 @@ function get_swap_mem($args) {
 //--------------------------------------------
 //-        Function to get Buffer Mem        -
 //--------------------------------------------
-function get_butffer_mem($args) {
+function get_buffer_mem($args) {
 
   $file = file('/proc/meminfo');
   $file_line = array();
@@ -360,7 +360,7 @@ function get_used_mem($args) {
 
   $totalmem = get_total_mem('kb');
   $freemem = get_free_mem('kb');
-  $buffers = get_butffer_mem('kb');
+  $buffers = get_buffer_mem('kb');
   $cachedmem = get_cached_mem('kb');
   $sreclaimable = get_sreclaimable_mem('kb');
   $shmem = get_shmem_mem('kb');
@@ -608,9 +608,9 @@ function get() {
     'swapmb' => get_swap_mem('mb'),
     'swapgb' => get_swap_mem('gb'),
 
-    'bufferkb' => get_butffer_mem('kb'),
-    'buffermb' => get_butffer_mem('mb'),
-    'buffergb' => get_butffer_mem('gb'),
+    'bufferkb' => get_buffer_mem('kb'),
+    'buffermb' => get_buffer_mem('mb'),
+    'buffergb' => get_buffer_mem('gb'),
 
     'shmemkb' => get_shmem_mem('kb'),
     'shmemmb' => get_shmem_mem('mb'),
