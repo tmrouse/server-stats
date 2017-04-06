@@ -14,7 +14,7 @@ function data() {
     'available' =>  get_available_mem('mb'),
     'cached' => get_cached_mem('mb'),
     'swap' => get_swap_mem('mb'),
-    'buffer' => get_butffer_mem('mb'),
+    'buffer' => get_buffer_mem('mb'),
     'shmem' => get_shmem_mem('mb'),
     'sreclaimable' => get_sreclaimable_mem('mb'),
     'sunreclaim' => get_sunreclaim_mem('mb'),
