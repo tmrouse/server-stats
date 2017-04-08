@@ -591,6 +591,7 @@ Here are some fetures that will be coming soon to Statsy!
 * Acess to network data
 * No Jquery dependency
 * Statsy dashbored templates
+* Seprate Core Loads
 
 If you have any ideas forimprovements please contact me here: tom.rouse123@gmail.com
 
