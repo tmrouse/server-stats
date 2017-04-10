@@ -587,11 +587,13 @@ Below is a small sample of what using some functions and arrays might look like 
 Here are some fetures that will be coming soon to Statsy!
 
 #### Complete rewrite of code into OOP
+#### Available as a composer package
+Smaller Things:
 * Acess to log files
 * Acess to network data
 * No Jquery dependency
 * Statsy dashbored templates
-* Seprate Core Loads
+* Seprate cpu core Loads
 
 If you have any ideas forimprovements please contact me here: tom.rouse123@gmail.com
 
