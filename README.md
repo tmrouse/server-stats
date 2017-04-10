@@ -586,7 +586,7 @@ Below is a small sample of what using some functions and arrays might look like 
 ## <a name="coming-soon"></a>Coming Soon
 Here are some fetures that will be coming soon to Statsy!
 
-#### Complete rewrite of code into OPP
+#### Complete rewrite of code into OOP
 * Acess to log files
 * Acess to network data
 * No Jquery dependency
