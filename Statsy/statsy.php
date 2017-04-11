@@ -24,7 +24,7 @@ Available Stats:
  - Ip: get_ip()
  - Uptime: uptime($args)
 
- -- Memeroy Stats --
+ -- Memory Stats --
 
  - Total Mem: get_total_mem($args)
  - Available Mem: get_available_mem($args)
@@ -52,11 +52,11 @@ Available Stats:
 - Get Total disk space: get_disk_total($arg)
 - Get Free Disk Space: get_disk_free($arg)
 - Get Used Disk: get_disk_used($arg)
-- Get Used Disk as %:get_disk_used2()
+- Get Used Disk as %: get_disk_used2()
 
  -- Tools --
  - Round up: round_up()
- - Converstion: convert($input, $converstion)
+ - Conversion: convert($input, $conversion)
 
  You can also use the array to call in the stats see docs for more information.
 
@@ -64,7 +64,7 @@ Available Stats:
 
 
 //-------------------------------------------
-//-    Function For getting the server IP   -
+//-    Function for getting the server IP   -
 //-------------------------------------------
 function get_ip() {
   $ip =  $_SERVER['SERVER_ADDR'];
@@ -421,9 +421,9 @@ function get_used_mem2() {
 
 
 //-------------------------------------------
-//-      Function For CPU information       -
+//-      Function for CPU information       -
 //-------------------------------------------
-//Function to get diffrent data about cpu
+//Function to get different data about cpu
 function get_cpuinfo($arg) {
 
   //'model' This gives you the model of the CPU
@@ -435,7 +435,7 @@ function get_cpuinfo($arg) {
     return $cpumodel;
   }
 
-  //'cores' This gives you the ammount of cores on the cpu
+  //'cores' This gives you the amount of cores on the cpu
   else if ($arg == 'cores') {
     $file = file('/proc/cpuinfo');
     $cpu_cores_line = $file[12];
@@ -454,7 +454,7 @@ function get_cpuinfo($arg) {
     return $cpuspeed_rounded;
   }
 
-  //'cache' This gives you ammount of cahe the cpu has
+  //'cache' This gives you amount of cache the cpu has
   else if ($arg == 'cache') {
     $file = file('/proc/cpuinfo');
     $cpu_cache_line = $file[8];
@@ -466,7 +466,7 @@ function get_cpuinfo($arg) {
 }
 
 //-------------------------------------------
-//-    Function For CPU Being Used As %     -
+//-    Function for CPU Being Used As %     -
 //-------------------------------------------
 function get_cpu_load(){
 
@@ -559,7 +559,7 @@ function get_disk_used2() {
 
 
 //-------------------------------------------
-//-        Function For Rounding up         -
+//-        Function for Rounding up         -
 //-------------------------------------------
 //Function to round numbers up
 function round_up ( $value, $precision ) {
@@ -568,17 +568,17 @@ function round_up ( $value, $precision ) {
 }
 
 //-------------------------------------------
-//-        Function For Converting          -
+//-        Function for Converting          -
 //-------------------------------------------
 //Function to convert to mb, gb
-function convert($input, $converstion) {
+function convert($input, $conversion) {
 
-  if ($converstion == 'mb') {
+  if ($conversion == 'mb') {
     $converted = $input / 1024;
     return round_up($converted, 2);
   }
 
-  else if ($converstion == 'gb') {
+  else if ($conversion == 'gb') {
     $converted = $input / 1024 / 1024;
     return round_up($converted, 2);
   }
