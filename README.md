@@ -4,15 +4,15 @@
 
 # Statsy
 
-Statsy is a easy to use open source PHP tool for developers, that allows you to return various types of information about your server. It can be used to retrieve static information or can be set up to auto refresh data whatever is needed for your project however you can still use Statsy and Statsy Auto together at the same time. Statsy makes it very easy to create dashboards and server monitor apps.
+Statsy is an easy to use open source PHP tool for developers, that allows you to return various types of information about your server. It can be used to retrieve static information or can be set up to auto refresh any data that is needed for your project, however you can still use Statsy and Statsy Auto together at the same time. Statsy makes it very easy to create dashboards and server monitoring apps.
 
-To use statsy you can either call the function or get the information from an array. This allows you to do much more as all the data is in array making it easier to implement into your project and give you more flexibility.
+To use Statsy you can either call the function or get the information from an array. This allows you to do much more, as all the data is in an array making it easier to implement into your project and give you more flexibility.
 
-## Table Of Content
+## Table Of Contents
 
-* [What information can statsy get?](#what-information)
-* [How to install/configure Statsy](#statsy-install)
-* [How to install/configure Statsy Auto](#statsy-install-auto)
+* [What information can Statsy get?](#what-information)
+* [How to install/configure Statsy](#Statsy-install)
+* [How to install/configure Statsy Auto](#Statsy-install-auto)
 * [List of functions and how to call them](#functions-list)
 * [Example](#example)
 * [Why use Statsy?](#why-use)
@@ -23,7 +23,7 @@ To use statsy you can either call the function or get the information from an ar
 
 
 ### Memory Stats
-All memory stats can be returned as KiloBytes, MegaBytes or GigaBytes.
+All memory stats can be returned as Kilobytes, Megabytes, or Gigabytes.
 
 * [Total Memory](#total-mem)
 * [Available Memory](#available-mem)
@@ -39,7 +39,7 @@ All memory stats can be returned as KiloBytes, MegaBytes or GigaBytes.
 * [Used Memory As Percent](#used-mem-percent)
 
 ### Disk Stats
-All disk stats can be returned as KiloBytes, MegaBytes or GigaBytes.
+All disk stats can be returned as Kilobytes, Megabytes, or Gigabytes.
 
 * [Total Disk](#total-disk)
 * [Free Disk](#free-disk)
@@ -62,48 +62,48 @@ All disk stats can be returned as KiloBytes, MegaBytes or GigaBytes.
 * [Convert Function](#convert)
 
 
-## <a name="statsy-install"></a>How To Install Statsy
+## <a name="Statsy-install"></a>How To install Statsy
 
-To install Statsy all you need to do is simply download the ``` statsy.php ``` file from the Statsy folder and include the file on whatever file you want to call the functions using the following code:
+To install Statsy all you need to do is simply download the ``` Statsy.php ``` file from the Statsy folder and include the file on whatever file you want to call the functions using the following code:
 ```php
-<?php include 'directory-to-statsy-file/statsy.php'; ?>
+<?php include 'directory-to-Statsy-file/Statsy.php'; ?>
 ```
-Now your ready to start using statsy! [List of functions](#functions-list)
+Now you're ready to start using Statsy! [List of functions](#functions-list)
 
-## <a name="statsy-install-auto"></a>How To Install Statsy Auto
+## <a name="Statsy-install-auto"></a>How To install Statsy Auto
 
-Using Statsy Auto is a little different then the normal Statsy instead of just calling the function or using the array you will need to set the location where you want the information to be shown then its will automatically be pulled in and refreshed. When using the normal Statsy you will only need to call the function or use the array however Statsy and Statsy Auto can be used together at the same time.
+Using Statsy Auto is a little different then the normal Statsy. Instead of just calling the function or using the array you will need to set the location where you want the information to be shown then it will automatically be pulled in and refreshed. When using the normal Statsy you will only need to call the function or use the array however Statsy and Statsy Auto can be used together at the same time.
 
-### Step 1: Download The relevant Files And JQuery
+### Step 1: Download The relevant files And jQuery
 
-To install Statsy Auto you will need to download the three files in the Statsy Auto folder ``` statsy.php ```, ``` statsy.js ```and ``` stats_json.php ```. You will also need to make sure you have JQuery installed (JQuery will not be needed much longer).
+To install Statsy Auto you will need to download the three files in the Statsy Auto folder ``` Statsy.php ```, ``` Statsy.js ```and ``` stats_json.php ```. You will also need to make sure you have jQuery installed (jQuery will not be needed much longer).
 
-### Step 2: Configure the statsy.js file (Most important step)
+### Step 2: Configure the Statsy.js file (Most important step)
 
 To configure this file you just need to set the variables so that Statsy knows where to find the ``` stats_json.php ``` and also knows where to display the data on your page/pages.
 
-First set the ``` var ``` for the ``` stats_json.php ``` file location this can be either a directory path or a URl, this is shown in the example below:
+First set the ``` var ``` for the ``` stats_json.php ``` file location this can be either a directory path or a URL, this is shown in the example below:
 
 ```javascript
-var stats_json_url = "https://www.example.com/statsy/stats_json.php";
+var stats_json_url = "https://www.example.com/Statsy/stats_json.php";
 ```
 
-Next set the ``` var ``` for the auto refresh delay. This is set in miliseconds (1000 miliseconds = 1 second), This is shown in the example below where the delay is set to 2 seconds:
+Next set the ``` var ``` for the auto refresh delay. This is set in milliseconds (1000 milliseconds = 1 second), This is shown in the example below where the delay is set to 2 seconds:
 
 ```javascript
 var auto_refresh_delay = 2000;
 ```
 
-Finally you just need to set where statsy wil display the information on your page by adding the class/ID names. The example below shows 2 examples one with a class nd one with an ID make sure to set all of the ``` vars ``` that you want to use.
+Finally you just need to set where Statsy will display the information on your page by adding the class/ID names. The example below shows 2 examples one with a class snd one with an ID make sure to set all of the ``` vars ``` that you want to use.
 
 ```javascript
 var total_mem_loc = ".example-class";
 var available_mem_loc = "#example-id";
 ```
 
-### Step 3: Configure the stats_json.php file (Only nessasarry if you want to customize the return kb, mb, gb)
+### Step 3: Configure the stats_json.php file (Only necessary if you want to customise the return kb, mb, gb)
 
-To configure this file all you need to do is change the args in the arrays to whatever you want Statsy Auto to return the example below shows how it is setup by defualt this will return all values in megabytes:
+To configure this file all you need to do is change the args in the arrays to whatever you want Statsy Auto to return. The example below shows how it is setup by default this will return all values in megabytes:
 
 ```php
 $mem = array(
@@ -128,10 +128,10 @@ $mem = array(
     'percent' => get_disk_used2()
   );
 ```
-There is no need to change anything else in this file inless you know what you are doing.This is all the configuration needed to use Statsy Auto.
+There is no need to change anything else in this file unless you know what you are doing.This is all the configuration needed to use Statsy Auto.
 
 ## <a name="functions-list"></a>List Of Functions And How To Use Them
-Below is a list of all the functions in Statsy and how to call them using the function or array. Both the array and function will return the same thing its just prefrence. When using Statsy Auto you can also use these functions at the same time if you want to.
+Below is a list of all the functions in Statsy and how to call them using the function or array. Both the array and function will return the same thing its just preference. When using Statsy Auto you can also use these functions at the same time if you want to.
 
 ## Memory
 
@@ -228,7 +228,7 @@ get()['mem']['buffergb'];
 
 
 ### <a name="shmem-mem"></a>Shmem Memory
-Examples of how to get shmem memory to display the value you will need to use ``` echo ```:
+Examples of how to get Shmem memory to display the value you will need to use ``` echo ```:
 
 #### Call using function:
 To return value in kb, mb or gb:
@@ -323,7 +323,7 @@ get()['mem']['realfreegb'];
 ```
 
 ### <a name="used-mem"></a>Used Memory
-The formular statsy uses to get an accurate used memory value is <b>MemTotal - MemFree - Buffers - Cached - SReclaimable - Shmem</b>
+The formula Statsy uses to get an accurate used memory value is <b>(MemTotal - MemFree - Buffers - Cached - SReclaimable - Shmem)</b>
 
 Examples of how to get used memory to display the value you will need to use ``` echo ```:
 
@@ -538,7 +538,7 @@ round_up ( $value, $precision )
 ```
 Example:
 ```php
-round_up ( 12.385y2324323, 2 )
+round_up ( 12.3852324323, 2 )
 ```
 
 ### <a name="convert"></a>Convert Function
@@ -552,7 +552,7 @@ convert(187374563765, 'mb')
 ```
 
 ## <a name="example"></a>Example
-NOTE: The example below are for normal Statsy as for Statsy Auto you will config the JS file to tell Statsy where you want the data to show however Statsy and Statsy Auto can use used together at the same time.
+NOTE: The example below are for normal Statsy as for Statsy Auto you will config the JS file to tell Statsy where you want the data to show, however Statsy and Statsy Auto can use used together at the same time.
 
 Below is a small sample of what using some functions and arrays might look like being called in a html/php file:
 ```php
@@ -589,13 +589,13 @@ Here are some fetures that will be coming soon to Statsy!
 #### Complete rewrite of code into OOP
 #### Available as a composer package
 Smaller Things:
-* Acess to log files
-* Acess to network data
-* No Jquery dependency
-* Statsy dashbored templates
-* Seprate cpu core Loads
+* Access to log files
+* Access to network data
+* No jQuery dependency
+* Statsy dashboard templates
+* Separate cpu core Loads
 
-If you have any ideas forimprovements please contact me here: tom.rouse123@gmail.com
+If you have any ideas for improvements please contact me here: tom.rouse123@gmail.com
 
 ## <a name="contributors"></a>Contributors
 Arthor: Tom Rouse (Tms157)
