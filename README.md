@@ -1,5 +1,5 @@
 <p align="center">
-  <img src ="https://tomrouse.me/images/for-white-background.svg" width="350px" />
+  <img src ="https://tomrouse.me/images/for-white-background.svg" width="500px" />
 </p>
 
 # Statsy
