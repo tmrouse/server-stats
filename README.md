@@ -8,6 +8,9 @@ Statsy is an easy to use open source PHP tool for developers, that allows you to
 
 To use Statsy you can either call the function or get the information from an array. This allows you to do much more, as all the data is in an array making it easier to implement into your project and give you more flexibility.
 
+### UPDATE
+The OO composer version of statsy will be released soon.
+
 ## Table Of Contents
 
 * [What information can Statsy get?](#what-information)
